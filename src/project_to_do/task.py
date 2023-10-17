@@ -1,5 +1,6 @@
 from datetime import datetime
 
+
 class Task:
     def __init__(self, task_id, name, description):
         """_summary_
@@ -48,13 +49,21 @@ class TaskList:
         self.task_id_counter = 1
 
     def add_task(self, name, description):
+        """ Add a task in the list of tasks
+            Update of the next task id
+
+        Args:
+            name (_type_): _description_
+            description (_type_): _description_
+        """
         task = Task(self.task_id_counter, name, description)
         self.tasks.append(task)
         self.task_id_counter += 1
 
     def complete_task(self, name):
         """_summary_
-
+        Complete the first task with the name=="name"
+        Shall we select with the id if more than one have the same name ?
         Args:
             name (_type_): _description_
         """
@@ -65,7 +74,8 @@ class TaskList:
 
     def remove_task(self, name):
         """_summary_
-
+        Remove the first task with the name=="name"
+        Shall we select with the id if more than one have the same name ?
         Args:
             name (_type_): _description_
         """
@@ -78,12 +88,15 @@ class TaskList:
         self.tasks.remove(task_to_remove)
 
     def display_tasks(self):
-        """ 
+        """ Display task if the list is not empty
+            Else disply no task
+
         """
-        if len(self.tasks)==0 :
+        if len(self.tasks) == 0:
             print("No tasks")
-        else :
+        else:
             print("*********Tasks*********")
             print("ID\tNAME\tDESCRIPTION\tCOMPLETED")
             for task in self.tasks:
-                print(f"{task.task_id}\t{task.name}\t{task.description}\t{task.completed}")
+                print(
+                    f"{task.task_id}\t{task.name}\t{task.description}\t{task.completed}")
