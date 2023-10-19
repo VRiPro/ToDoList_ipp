@@ -41,6 +41,38 @@ class Task:
         self.modif_date = datetime.now()
 
 
+class CriticalTask(Task):
+    def __init__(self, task_id, name, description, deadline):
+        """_summary_
+
+        Args:
+            task_id (_type_): _description_
+            name (_type_): _description_
+            description (_type_): _description_
+            date (_type_): _description_
+            state (_type_): _description_
+            category (_type_): _description_
+            priority (_type_): _description_
+        """
+        super().__init__(task_id, name, description)
+        self.priority = "Critical"
+        self._CriticalTask__deadline = datetime.strptime(deadline, "%Y-%m-%d")
+
+    @property
+    def deadline(self):
+        return self._CriticalTask__deadline
+    
+    @deadline.setter
+    def deadline(self, deadline):
+        """Setter of the deadline attribute
+        """
+        if isinstance(deadline, datetime):
+            self._CriticalTask__deadline = deadline
+        else:
+            self._CriticalTask__deadline = datetime.strptime(deadline, "%Y-%m-%d")
+
+    
+
 class TaskList:
     def __init__(self):
         """_summary_

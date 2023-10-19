@@ -1,4 +1,4 @@
-from src.project_to_do.task import Task, TaskList
+from src.project_to_do.task import Task, TaskList, CriticalTask
 from datetime import datetime
 
 # Unitary tests on the "task" class
@@ -35,8 +35,28 @@ def test_update_task():
     assert task.description == "new_description"
     assert task.modif_date.date() == datetime.now().date()
 
-# Unitary tests on the "taskList" class
+# Unitary tests on the "CriticalTask" class
 
+def test_init_criticaltask():
+    """Test on the initialization of the criticalTask
+    """
+    criticalTask = CriticalTask(1, "ouloulou", "oulala", "2023-10-19")
+    assert criticalTask.task_id == 1
+    assert criticalTask.name == "ouloulou"
+    assert criticalTask.description == "oulala"
+    assert criticalTask._CriticalTask__deadline == datetime.strptime("2023-10-19", "%Y-%m-%d")
+
+def test_setDeadline():
+    """Test on the setDeadline method
+    """
+    criticalTask = CriticalTask(1, "ouloulou", "oulala", "2023-10-19")
+    criticalTask.deadline = datetime.strptime("2023-12-04", "%Y-%m-%d")
+    assert criticalTask.task_id == 1
+    assert criticalTask.name == "ouloulou"
+    assert criticalTask.description == "oulala"
+    assert criticalTask._CriticalTask__deadline == datetime.strptime("2023-12-04", "%Y-%m-%d")
+
+# Unitary tests on the "taskList" class
 
 def test_init_taskList():
     """Test on the initialization of the taskList
