@@ -12,7 +12,7 @@ def main():
     task_list.complete_task("Aller a Télécom")
     # task_list.display_tasks()
     # ON SUPPRIME UNE TACHE.
-    task_list.remove_task("Aller a Télécom")
+    task_list.remove_task(1)
     # ON AFFICHE LES TACHES
     task_list.display_tasks()
 
