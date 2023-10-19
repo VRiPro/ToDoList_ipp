@@ -94,9 +94,14 @@ class TaskList:
         """
         if len(self.tasks) == 0:
             print("No tasks")
+            return "No tasks"
         else:
+            result = "*********Tasks*********\n"
+            result += "ID\tNAME\tDESCRIPTION\tCOMPLETED\n"
             print("*********Tasks*********")
             print("ID\tNAME\tDESCRIPTION\tCOMPLETED")
             for task in self.tasks:
+                result += f"{task.task_id}\t{task.name}\t{task.description}\t{task.completed}\n"
                 print(
                     f"{task.task_id}\t{task.name}\t{task.description}\t{task.completed}")
+            return result
