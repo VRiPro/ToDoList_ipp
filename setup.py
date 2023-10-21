@@ -8,6 +8,6 @@ setup(
     author=["Ahmed", "Nour", "Victor", "Mathieu"],
     packages=find_packages(),
     install_requires=[
-        "datetime"
+        "pytest"
     ],
 )

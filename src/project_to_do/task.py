@@ -1,4 +1,5 @@
 from datetime import datetime
+from project_to_do.utils.logger import logger
 
 class Task:
     """Represents a task with attributes for identification, name, and description.
@@ -70,6 +71,7 @@ class TaskList:
         task = Task(self.task_id_counter, name, description)
         self.tasks.append(task)
         self.task_id_counter += 1
+        logger.debug(f"Task {task.task_id} added")
 
     def complete_task(self, name):
         """Mark the first task with the given name as completed.
