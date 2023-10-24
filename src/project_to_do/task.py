@@ -1,6 +1,7 @@
 from datetime import datetime
 from project_to_do.utils.logger import logger
 
+
 class Task:
     """Represents a task with attributes for identification, name, and description.
 
@@ -16,6 +17,7 @@ class Task:
         category (str): Category of the task.
         priority (str): Priority level of the task.
     """
+
     def __init__(self, task_id, name, description):
         """Initialize a task.
 
@@ -35,7 +37,14 @@ class Task:
 
     def complete(self):
         """Mark the task as completed."""
-        self.completed = True
+        if self.completed != True:  # VR
+            self.completed = True
+        else:  # VR
+            try:
+                raise ErreursToDo(
+                    "the task is already sets as completes !")  # vr
+            except ErreursToDo as e:
+                print(e)
 
     def update(self, name, description):
         """Update the task's name and description.
@@ -44,9 +53,16 @@ class Task:
             name (str): New name for the task.
             description (str): New description for the task.
         """
-        self.name = name
-        self.description = description
-        self.modif_date = datetime.now()
+        if self.name != name or self.description != description:  # vr
+            self.name = name
+            self.description = description
+            self.modif_date = datetime.now()
+        else:  # vr
+            try:
+                raise ErreursToDo(
+                    "Name and description were similar before update")  # vr
+            except ErreursToDo as e:
+                print(e)
 
 
 class TaskList:
@@ -56,6 +72,7 @@ class TaskList:
         tasks (list): List of tasks.
         task_id_counter (int): Counter to track the next available task ID.
     """
+
     def __init__(self):
         """Initialize a task list."""
         self.tasks = []
@@ -69,9 +86,16 @@ class TaskList:
             description (str): Description of the task.
         """
         task = Task(self.task_id_counter, name, description)
-        self.tasks.append(task)
-        self.task_id_counter += 1
-        logger.debug(f"Task {task.task_id} added")
+        if not task in self.tasks:
+            self.tasks.append(task)
+            self.task_id_counter += 1
+            logger.debug(f"Task {task.task_id} added")
+        else:
+            try:
+                raise ErreursToDo(
+                    "A task with similar name and description exist")
+            except ErreursToDo as e:
+                print(e)
 
     def complete_task(self, name):
         """Mark the first task with the given name as completed.
@@ -90,13 +114,20 @@ class TaskList:
         Args:
             task_id (int): ID of the task to remove.
         """
+        id_found = False
         task_to_remove = None
         for task in self.tasks:
             if task.task_id == task_id:
+                id_found = True
                 task_to_remove = task
                 break
-
-        self.tasks.remove(task_to_remove)
+        try:
+            if id_found == True:
+                self.tasks.remove(task_to_remove)
+            else:
+                raise ErreursToDo("The ID of the task does not exist")  # vr
+        except ErreursToDo as e:
+            print(e)
 
     def display_tasks(self):
         """Display tasks in the list, or indicate no tasks if the list is empty."""
@@ -132,6 +163,7 @@ class CriticalTask(Task):
     Note:
         The 'deadline' attribute can be set as a string in "%Y-%m-%d" format or as a datetime object.
     """
+
     def __init__(self, task_id, name, description, deadline):
         """Initialize a critical task with a 'Critical' priority level and a deadline.
 
@@ -149,7 +181,7 @@ class CriticalTask(Task):
     def deadline(self):
         """Getter for the deadline attribute."""
         return self._CriticalTask__deadline
-    
+
     @deadline.setter
     def deadline(self, deadline):
         """Setter for the deadline attribute.
@@ -160,4 +192,11 @@ class CriticalTask(Task):
         if isinstance(deadline, datetime):
             self._CriticalTask__deadline = deadline
         else:
-            self._CriticalTask__deadline = datetime.strptime(deadline, "%Y-%m-%d")
+            self._CriticalTask__deadline = datetime.strptime(
+                deadline, "%Y-%m-%d")
+
+
+class ErreursToDo(Exception):
+    def __init__(self, message="Une erreur est survenue"):
+        self.message = message
+        super().__init__(self.message)

@@ -1,5 +1,11 @@
 from src.project_to_do.task import Task, TaskList, CriticalTask
-from datetime import datetime
+import os
+import sys
+# from datetime import datetime
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# Add the parent directory of the src module to the Python path
+
 
 # Unitary tests on the "task" class
 
@@ -37,6 +43,7 @@ def test_update_task():
 
 # Unitary tests on the "CriticalTask" class
 
+
 def test_init_criticaltask():
     """Test on the initialization of the criticalTask
     """
@@ -44,7 +51,9 @@ def test_init_criticaltask():
     assert criticalTask.task_id == 1
     assert criticalTask.name == "ouloulou"
     assert criticalTask.description == "oulala"
-    assert criticalTask._CriticalTask__deadline == datetime.strptime("2023-10-19", "%Y-%m-%d")
+    assert criticalTask._CriticalTask__deadline == datetime.strptime(
+        "2023-10-19", "%Y-%m-%d")
+
 
 def test_setDeadline():
     """Test on the setDeadline method
@@ -54,9 +63,11 @@ def test_setDeadline():
     assert criticalTask.task_id == 1
     assert criticalTask.name == "ouloulou"
     assert criticalTask.description == "oulala"
-    assert criticalTask._CriticalTask__deadline == datetime.strptime("2023-12-04", "%Y-%m-%d")
+    assert criticalTask._CriticalTask__deadline == datetime.strptime(
+        "2023-12-04", "%Y-%m-%d")
 
 # Unitary tests on the "taskList" class
+
 
 def test_init_taskList():
     """Test on the initialization of the taskList
