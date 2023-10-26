@@ -192,8 +192,11 @@ class CriticalTask(Task):
         if isinstance(deadline, datetime):
             self._CriticalTask__deadline = deadline
         else:
-            self._CriticalTask__deadline = datetime.strptime(
-                deadline, "%Y-%m-%d")
+            try:
+                self._CriticalTask__deadline = datetime.strptime(
+                    deadline, "%Y-%m-%d")
+            except ValueError as e:
+                print(e)
 
 
 class ErreursToDo(Exception):
