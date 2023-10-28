@@ -1,0 +1,27 @@
+name: Python Autopep8 Check
+
+on: [push]
+
+jobs:
+  format-check:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8  # Choisissez la version Python souhaitée
+
+    - name: Install dependencies
+      run: |
+        pip install autopep8
+      # Vous pouvez ajouter d'autres dépendances Python ici
+
+    - name: Run autopep8
+      run: |
+        autopep8 --recursive .
+      # Vous pouvez personnaliser l'argument pour spécifier le répertoire ou les fichiers à formater
+
