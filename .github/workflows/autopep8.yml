@@ -22,6 +22,6 @@ jobs:
 
     - name: Run autopep8
       run: |
-        autopep8 --recursive .
+        autopep8 --diff --recursive .
       # Vous pouvez personnaliser l'argument pour spécifier le répertoire ou les fichiers à formater
 
