@@ -22,7 +22,7 @@ jobs:
 
     - name: Run autopep8
       run: |
-        autopep8 --diff --recursive .
+        autopep8 --in-place --recursive .
       # Vous pouvez personnaliser l'argument pour spécifier le répertoire ou les fichiers à formater
     - name: Fail if autopep8 made changes
       if: steps.autopep8.outputs.exit-code == 2
