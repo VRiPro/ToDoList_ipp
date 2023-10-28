@@ -1,15 +1,13 @@
-from src.project_to_do.task import Task, TaskList, CriticalTask
-import os
-import sys
-# from datetime import datetime
+"""This module tests the task.py module.
+"""
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-# Add the parent directory of the src module to the Python path
+from todoproject.task import Task, CriticalTask, TaskList
+from datetime import datetime
+import sys
+import os
 
 
 # Unitary tests on the "task" class
-
-
 def test_init_task():
     """Test on the initialization of the task
     """
@@ -47,10 +45,10 @@ def test_update_task():
 def test_init_criticaltask():
     """Test on the initialization of the criticalTask
     """
-    criticalTask = CriticalTask(1, "ouloulou", "oulala", "2023-10-19")
+    criticalTask = CriticalTask(1, "Urgent", "Anniversaie Jean", "2023-10-19")
     assert criticalTask.task_id == 1
-    assert criticalTask.name == "ouloulou"
-    assert criticalTask.description == "oulala"
+    assert criticalTask.name == "Urgent"
+    assert criticalTask.description == "Anniversaire Jean"
     assert criticalTask._CriticalTask__deadline == datetime.strptime(
         "2023-10-19", "%Y-%m-%d")
 
@@ -58,11 +56,11 @@ def test_init_criticaltask():
 def test_setDeadline():
     """Test on the setDeadline method
     """
-    criticalTask = CriticalTask(1, "ouloulou", "oulala", "2023-10-19")
+    criticalTask = CriticalTask(1, "Urgent", "Anniversaire Jean", "2023-10-19")
     criticalTask.deadline = datetime.strptime("2023-12-04", "%Y-%m-%d")
     assert criticalTask.task_id == 1
-    assert criticalTask.name == "ouloulou"
-    assert criticalTask.description == "oulala"
+    assert criticalTask.name == "Urgent"
+    assert criticalTask.description == "Anniversaire Jean"
     assert criticalTask._CriticalTask__deadline == datetime.strptime(
         "2023-12-04", "%Y-%m-%d")
 

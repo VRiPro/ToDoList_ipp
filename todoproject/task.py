@@ -1,5 +1,9 @@
+"""This module provides the Task and TaskList classes for managing tasks.
+"""
 from datetime import datetime
-from project_to_do.utils.logger import logger
+from logger import logger
+import sys
+import os
 
 
 class Task:
@@ -150,6 +154,7 @@ class CriticalTask(Task):
     """Represents a critical task that inherits from Task.
 
     This class extends the Task class with a 'Critical' priority level and a deadline attribute.
+
 
     Args:
         task_id (int): Unique identifier for the task.

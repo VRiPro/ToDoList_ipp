@@ -1,10 +1,7 @@
-from project_to_do.task import Task, TaskList, CriticalTask
-import sys
-import os
-
-script_dir = os.path.dirname(os.path.abspath(__file__))
-project_root = os.path.abspath(os.path.join(script_dir, '..'))
-sys.path.append(project_root)
+"""This module is used to trry some actions on a task list.
+"""
+from todoproject.task import TaskList
+from datetime import datetime
 
 
 def main():
