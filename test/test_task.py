@@ -1,6 +1,5 @@
 """This module tests the task.py module.
 """
-
 from todoproject.task import Task, CriticalTask, TaskList
 from datetime import datetime
 import sys
