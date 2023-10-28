@@ -24,6 +24,9 @@ jobs:
       run: |
         autopep8 --diff --recursive .
       # Vous pouvez personnaliser l'argument pour spécifier le répertoire ou les fichiers à formater
+    - name: Fail if autopep8 made changes
+      if: steps.autopep8.outputs.exit-code == 2
+      run: exit 1
 
   docstring-check:
     runs-on: ubuntu-latest
