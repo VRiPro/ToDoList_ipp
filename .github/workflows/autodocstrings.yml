@@ -1,0 +1,30 @@
+name: Python Docstring Check
+
+on: [push]
+jobs:
+  docstring-check:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: 3.8  # Choisissez la version Python souhaitée
+
+    - name: Install pydocstyle
+      run: |
+        pip install pydocstyle
+      # Vous pouvez ajouter d'autres dépendances Python ici
+
+    - name: Check docstrings
+      run: |
+        # Exécute pydocstyle pour vérifier les docstrings
+        pydocstyle ./
+      # Remplacez "your_project_directory" par le chemin de votre projet Python
+
+    - name: Fail if docstrings are missing
+      if: steps.docstring-check.outcome == 'failure'
+      run: exit 1
