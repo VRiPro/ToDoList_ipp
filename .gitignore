@@ -1,2 +1,9 @@
 poetry.lock
-__pycache__/
+*.pyc
+**/__pycache__/
+/logs/*
+.vscode/
+.pytest_cache/
+**/htmlcov/
+**/.coverage
+.venv/
