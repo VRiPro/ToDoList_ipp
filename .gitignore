@@ -1,0 +1,10 @@
+poetry.lock
+*.pyc
+**/__pycache__/
+.vscode/
+/logs/errors.log
+/logs/debug.log
+.pytest_cache/
+**/htmlcov/
+**/.coverage
+.venv/
