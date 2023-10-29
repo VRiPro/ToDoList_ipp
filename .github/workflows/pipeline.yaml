@@ -1,0 +1,51 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+
+    - name: Install Poetry
+      run: |
+        curl -sSL https://install.python-poetry.org | python3 -
+      shell: bash
+
+    - name: Install project dependencies
+      run: poetry install
+
+    - name: Check PEP8 compliance
+      run: poetry run flake8
+
+    - name: Check docstrings
+      run: poetry run pydocstyle your_module.py
+
+    - name: Run unit tests
+      run: poetry run pytest
+
+    - name: Calculate code coverage
+      run: |
+        poetry run coverage run -m pytest
+        poetry run coverage report -m --fail-under=90
+      continue-on-error: true  # Permet à la vérification de la couverture de se poursuivre même si le taux est insuffisant
+
+    - name: Upload coverage report
+      if: ${{ steps.coverage.outputs.exitcode == 0 }}
+      uses: actions/upload-artifact@v2
+      with:
+        name: coverage-report
+        path: .coverage
+
+  # Ajoutez d'autres étapes pour déployer votre application si nécessaire.
