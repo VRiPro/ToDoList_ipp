@@ -9,7 +9,7 @@ def main():
     # AJOUT DE 2 TACHES.
     task_list.add_task("Aller au BeForum", "Atelier negociation")
     task_list.add_task("Aller a Télécom", "TP Hadoop",
-                        "critical", "2023-10-31")
+                       "critical", "2023-10-31")
     # task_list.display_tasks()
     # ON COMPLETE UNE TACHE.
     task_list.complete_task(1)
