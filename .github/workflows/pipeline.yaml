@@ -30,7 +30,7 @@ jobs:
       run: |
         poetry run flake8
         poetry run autopep8 --in-place --recursive ./
-      continue-on-error: true
+
 
     - name: Check docstrings
       run: poetry run pydocstyle ./
