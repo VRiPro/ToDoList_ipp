@@ -30,7 +30,7 @@ jobs:
       run: poetry run flake8
 
     - name: Check docstrings
-      run: poetry run pydocstyle your_module.py
+      run: poetry run pydocstyle task.py
 
     - name: Run unit tests
       run: poetry run pytest
