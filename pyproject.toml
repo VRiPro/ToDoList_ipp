@@ -12,6 +12,7 @@ autopep8 = "^2.0.4"
 setuptools = "^68.2.2"
 pytest = "^7.4.3"
 coverage = "^7.3.2"
+pydocstyle = "^6.3.0"
 
 
 [build-system]
