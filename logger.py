@@ -1,6 +1,8 @@
-"""This module is used to configure our loggers
-   We particularly focus on logging debug and error logs
+"""This module is used to configure our loggers.
+
+We particularly focus on logging debug and error logs.
 """
+
 import logging
 import os
 

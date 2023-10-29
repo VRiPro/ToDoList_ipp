@@ -432,3 +432,128 @@
 2023-10-29 15:20:15,570 - debug_logger - DEBUG - Task 1 added successfully
 2023-10-29 15:20:15,570 - debug_logger - DEBUG - Task 1 completed
 2023-10-29 15:20:15,570 - debug_logger - DEBUG - Tasks are displayed
+2023-10-29 16:28:23,800 - debug_logger - DEBUG - Task 1 completed
+2023-10-29 16:28:23,802 - debug_logger - DEBUG - Task 1 updated successfully
+2023-10-29 16:28:23,811 - debug_logger - DEBUG - date changed
+2023-10-29 16:28:23,815 - debug_logger - DEBUG - date changed
+2023-10-29 16:28:23,815 - debug_logger - DEBUG - Task 1 added successfully
+2023-10-29 16:28:23,818 - debug_logger - DEBUG - date changed
+2023-10-29 16:28:23,819 - debug_logger - DEBUG - date changed
+2023-10-29 16:28:23,825 - debug_logger - DEBUG - Task 1 added successfully
+2023-10-29 16:28:23,826 - debug_logger - DEBUG - Task 1 added successfully
+2023-10-29 16:28:23,826 - debug_logger - DEBUG - Task 2 added successfully
+2023-10-29 16:28:23,828 - debug_logger - DEBUG - Task 1 added successfully
+2023-10-29 16:28:23,828 - debug_logger - DEBUG - Task 2 added successfully
+2023-10-29 16:28:23,828 - debug_logger - DEBUG - Task 3 added successfully
+2023-10-29 16:28:23,828 - debug_logger - DEBUG - Task 4 added successfully
+2023-10-29 16:28:23,828 - debug_logger - DEBUG - Task 5 added successfully
+2023-10-29 16:28:23,828 - debug_logger - DEBUG - Task 6 added successfully
+2023-10-29 16:28:23,828 - debug_logger - DEBUG - Task 7 added successfully
+2023-10-29 16:28:23,828 - debug_logger - DEBUG - Task 8 added successfully
+2023-10-29 16:28:23,828 - debug_logger - DEBUG - Task 9 added successfully
+2023-10-29 16:28:23,828 - debug_logger - DEBUG - Task 10 added successfully
+2023-10-29 16:28:23,828 - debug_logger - DEBUG - Task 11 added successfully
+2023-10-29 16:28:23,828 - debug_logger - DEBUG - Task 12 added successfully
+2023-10-29 16:28:23,828 - debug_logger - DEBUG - Task 13 added successfully
+2023-10-29 16:28:23,828 - debug_logger - DEBUG - Task 14 added successfully
+2023-10-29 16:28:23,828 - debug_logger - DEBUG - Task 15 added successfully
+2023-10-29 16:28:23,828 - debug_logger - DEBUG - Task 16 added successfully
+2023-10-29 16:28:23,829 - debug_logger - DEBUG - Task 17 added successfully
+2023-10-29 16:28:23,829 - debug_logger - DEBUG - Task 18 added successfully
+2023-10-29 16:28:23,829 - debug_logger - DEBUG - Task 19 added successfully
+2023-10-29 16:28:23,829 - debug_logger - DEBUG - Task 20 added successfully
+2023-10-29 16:28:23,829 - debug_logger - DEBUG - Task 21 added successfully
+2023-10-29 16:28:23,829 - debug_logger - DEBUG - Task 22 added successfully
+2023-10-29 16:28:23,829 - debug_logger - DEBUG - Task 23 added successfully
+2023-10-29 16:28:23,829 - debug_logger - DEBUG - Task 24 added successfully
+2023-10-29 16:28:23,829 - debug_logger - DEBUG - Task 25 added successfully
+2023-10-29 16:28:23,829 - debug_logger - DEBUG - Task 26 added successfully
+2023-10-29 16:28:23,829 - debug_logger - DEBUG - Task 27 added successfully
+2023-10-29 16:28:23,829 - debug_logger - DEBUG - Task 28 added successfully
+2023-10-29 16:28:23,829 - debug_logger - DEBUG - Task 29 added successfully
+2023-10-29 16:28:23,829 - debug_logger - DEBUG - Task 30 added successfully
+2023-10-29 16:28:23,829 - debug_logger - DEBUG - Task 31 added successfully
+2023-10-29 16:28:23,829 - debug_logger - DEBUG - Task 32 added successfully
+2023-10-29 16:28:23,829 - debug_logger - DEBUG - Task 33 added successfully
+2023-10-29 16:28:23,830 - debug_logger - DEBUG - Task 34 added successfully
+2023-10-29 16:28:23,830 - debug_logger - DEBUG - Task 35 added successfully
+2023-10-29 16:28:23,830 - debug_logger - DEBUG - Task 36 added successfully
+2023-10-29 16:28:23,830 - debug_logger - DEBUG - Task 37 added successfully
+2023-10-29 16:28:23,830 - debug_logger - DEBUG - Task 38 added successfully
+2023-10-29 16:28:23,830 - debug_logger - DEBUG - Task 39 added successfully
+2023-10-29 16:28:23,830 - debug_logger - DEBUG - Task 40 added successfully
+2023-10-29 16:28:23,830 - debug_logger - DEBUG - Task 41 added successfully
+2023-10-29 16:28:23,830 - debug_logger - DEBUG - Task 42 added successfully
+2023-10-29 16:28:23,830 - debug_logger - DEBUG - Task 43 added successfully
+2023-10-29 16:28:23,830 - debug_logger - DEBUG - Task 44 added successfully
+2023-10-29 16:28:23,830 - debug_logger - DEBUG - Task 45 added successfully
+2023-10-29 16:28:23,830 - debug_logger - DEBUG - Task 46 added successfully
+2023-10-29 16:28:23,830 - debug_logger - DEBUG - Task 47 added successfully
+2023-10-29 16:28:23,830 - debug_logger - DEBUG - Task 48 added successfully
+2023-10-29 16:28:23,830 - debug_logger - DEBUG - Task 49 added successfully
+2023-10-29 16:28:23,830 - debug_logger - DEBUG - Task 50 added successfully
+2023-10-29 16:28:23,830 - debug_logger - DEBUG - Task 51 added successfully
+2023-10-29 16:28:23,831 - debug_logger - DEBUG - Task 52 added successfully
+2023-10-29 16:28:23,831 - debug_logger - DEBUG - Task 53 added successfully
+2023-10-29 16:28:23,831 - debug_logger - DEBUG - Task 54 added successfully
+2023-10-29 16:28:23,831 - debug_logger - DEBUG - Task 55 added successfully
+2023-10-29 16:28:23,831 - debug_logger - DEBUG - Task 56 added successfully
+2023-10-29 16:28:23,831 - debug_logger - DEBUG - Task 57 added successfully
+2023-10-29 16:28:23,831 - debug_logger - DEBUG - Task 58 added successfully
+2023-10-29 16:28:23,831 - debug_logger - DEBUG - Task 59 added successfully
+2023-10-29 16:28:23,831 - debug_logger - DEBUG - Task 60 added successfully
+2023-10-29 16:28:23,831 - debug_logger - DEBUG - Task 61 added successfully
+2023-10-29 16:28:23,831 - debug_logger - DEBUG - Task 62 added successfully
+2023-10-29 16:28:23,831 - debug_logger - DEBUG - Task 63 added successfully
+2023-10-29 16:28:23,831 - debug_logger - DEBUG - Task 64 added successfully
+2023-10-29 16:28:23,831 - debug_logger - DEBUG - Task 65 added successfully
+2023-10-29 16:28:23,831 - debug_logger - DEBUG - Task 66 added successfully
+2023-10-29 16:28:23,831 - debug_logger - DEBUG - Task 67 added successfully
+2023-10-29 16:28:23,831 - debug_logger - DEBUG - Task 68 added successfully
+2023-10-29 16:28:23,832 - debug_logger - DEBUG - Task 69 added successfully
+2023-10-29 16:28:23,832 - debug_logger - DEBUG - Task 70 added successfully
+2023-10-29 16:28:23,832 - debug_logger - DEBUG - Task 71 added successfully
+2023-10-29 16:28:23,832 - debug_logger - DEBUG - Task 72 added successfully
+2023-10-29 16:28:23,832 - debug_logger - DEBUG - Task 73 added successfully
+2023-10-29 16:28:23,832 - debug_logger - DEBUG - Task 74 added successfully
+2023-10-29 16:28:23,832 - debug_logger - DEBUG - Task 75 added successfully
+2023-10-29 16:28:23,832 - debug_logger - DEBUG - Task 76 added successfully
+2023-10-29 16:28:23,832 - debug_logger - DEBUG - Task 77 added successfully
+2023-10-29 16:28:23,832 - debug_logger - DEBUG - Task 78 added successfully
+2023-10-29 16:28:23,832 - debug_logger - DEBUG - Task 79 added successfully
+2023-10-29 16:28:23,832 - debug_logger - DEBUG - Task 80 added successfully
+2023-10-29 16:28:23,832 - debug_logger - DEBUG - Task 81 added successfully
+2023-10-29 16:28:23,832 - debug_logger - DEBUG - Task 82 added successfully
+2023-10-29 16:28:23,832 - debug_logger - DEBUG - Task 83 added successfully
+2023-10-29 16:28:23,832 - debug_logger - DEBUG - Task 84 added successfully
+2023-10-29 16:28:23,832 - debug_logger - DEBUG - Task 85 added successfully
+2023-10-29 16:28:23,833 - debug_logger - DEBUG - Task 86 added successfully
+2023-10-29 16:28:23,833 - debug_logger - DEBUG - Task 87 added successfully
+2023-10-29 16:28:23,833 - debug_logger - DEBUG - Task 88 added successfully
+2023-10-29 16:28:23,833 - debug_logger - DEBUG - Task 89 added successfully
+2023-10-29 16:28:23,833 - debug_logger - DEBUG - Task 90 added successfully
+2023-10-29 16:28:23,833 - debug_logger - DEBUG - Task 91 added successfully
+2023-10-29 16:28:23,833 - debug_logger - DEBUG - Task 92 added successfully
+2023-10-29 16:28:23,833 - debug_logger - DEBUG - Task 93 added successfully
+2023-10-29 16:28:23,833 - debug_logger - DEBUG - Task 94 added successfully
+2023-10-29 16:28:23,833 - debug_logger - DEBUG - Task 95 added successfully
+2023-10-29 16:28:23,833 - debug_logger - DEBUG - Task 96 added successfully
+2023-10-29 16:28:23,833 - debug_logger - DEBUG - Task 97 added successfully
+2023-10-29 16:28:23,833 - debug_logger - DEBUG - Task 98 added successfully
+2023-10-29 16:28:23,833 - debug_logger - DEBUG - Task 99 added successfully
+2023-10-29 16:28:23,833 - debug_logger - DEBUG - Task 100 added successfully
+2023-10-29 16:28:23,835 - debug_logger - DEBUG - Task 1 added successfully
+2023-10-29 16:28:23,836 - debug_logger - DEBUG - Task 1 completed
+2023-10-29 16:28:23,836 - debug_logger - DEBUG - Task 1 added successfully
+2023-10-29 16:28:23,836 - debug_logger - DEBUG - Task 1 removed successfully
+2023-10-29 16:28:23,842 - debug_logger - DEBUG - No tasks
+2023-10-29 16:28:23,847 - debug_logger - DEBUG - Task 1 added successfully
+2023-10-29 16:28:23,848 - debug_logger - DEBUG - Tasks are displayed
+2023-10-29 16:28:23,849 - debug_logger - DEBUG - Tasks are displayed
+2023-10-29 16:28:23,852 - debug_logger - DEBUG - Task 1 added successfully
+2023-10-29 16:28:23,852 - debug_logger - DEBUG - Task 2 added successfully
+2023-10-29 16:28:23,853 - debug_logger - DEBUG - Tasks are displayed
+2023-10-29 16:28:23,853 - debug_logger - DEBUG - Tasks are displayed
+2023-10-29 16:28:23,855 - debug_logger - DEBUG - Task 1 added successfully
+2023-10-29 16:28:23,855 - debug_logger - DEBUG - Task 1 completed
+2023-10-29 16:28:23,855 - debug_logger - DEBUG - Tasks are displayed

@@ -1,3 +1,9 @@
+"""runs a series of tests using the pytest framework.
+
+Collecting and reporting code coverage data,
+generating a coverage report in both text and HTML formats.
+"""
+
 import sys
 import os
 import coverage
@@ -5,6 +11,11 @@ import pytest
 
 
 def run_tests():
+    """Run pytest tests and generates code coverage reports.
+
+    Returns:
+        int: The exit code from the pytest tests.
+    """
     # Get the directory where this script is located
     script_dir = os.path.dirname(os.path.abspath(__file__))
 

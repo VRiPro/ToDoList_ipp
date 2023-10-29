@@ -1,13 +1,12 @@
-"""This module provides the Task and TaskList classes for managing tasks.
-"""
+"""This module provides the Task and TaskList classes for managing tasks."""
+
 from datetime import datetime
 from typing import List
 from logger import debug_logger, error_logger
 
 
 class Task:
-    """Represents a task with attributes for identification,
-    name, and description.
+    """Represents a task with attributes for Id, name, and description.
 
     This class provides methods to mark tasks as completed and
     update their name and description.
@@ -97,8 +96,7 @@ class CriticalTask(Task):
 
     def __init__(self, task_id: int, name: str,
                  description: str, deadline: datetime) -> None:
-        """Initialize a critical task with a
-        'Critical' priority level and a deadline.
+        """Initialize a task with a 'Critical' priority level and a deadline.
 
         Args:
             task_id (int): Unique identifier for the task.
@@ -137,8 +135,7 @@ class CriticalTask(Task):
 
 
 class TaskList:
-    """Manages a list of tasks with methods to add, complete, remove,
-    and display tasks.
+    """Manage list of tasks to add, complete, remove, and display them.
 
     Attributes:
         tasks (list): List of tasks.
@@ -211,8 +208,7 @@ class TaskList:
             error_logger.error(e)
 
     def display_tasks(self) -> str:
-        """Display tasks in the list, or indicate
-        no tasks if the list is empty."""
+        """Display tasks, or indicate no tasks if it's the case."""
         if len(self.tasks) == 0:
             print("No tasks")
             debug_logger.debug("No tasks")
@@ -235,8 +231,14 @@ class TaskList:
 
 
 class ErreursToDo(Exception):
-    """A custom Exeption Type of our project
-    """
-    def __init__(self, message: str = "Une erreur est survenue") -> None:
+    """Custom exception for our project."""
+
+    def __init__(self, message: str = "An error occurred") -> None:
+        """Initialize the custom exception.
+
+        Args:
+            message (str, optional): A descriptive error message.
+            Defaults to "An error occurred".
+        """
         self.message: str = message
         super().__init__(self.message)
