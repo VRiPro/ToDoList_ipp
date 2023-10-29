@@ -51,13 +51,16 @@ def test_init_criticaltask():
     assert critical_task._CriticalTask__deadline == datetime.strptime(
         "2023-10-19", "%Y-%m-%d")
 
+
 def test_add_critical_task_with_deadline():
     """Test on adding a critical task with a deadline
     """
     task_list = TaskList()
-    task_list.add_task("name", "description", critical=True, deadline="2023-10-19")
+    task_list.add_task("name", "description", 
+                       critical=True, deadline="2023-10-19")
     assert isinstance(task_list.tasks[0], CriticalTask)
-    assert task_list.tasks[0].deadline == datetime.strptime("2023-10-19", "%Y-%m-%d")
+    assert task_list.tasks[0].deadline == datetime.strptime(
+        "2023-10-19", "%Y-%m-%d")
 
 
 def test_set_deadline():

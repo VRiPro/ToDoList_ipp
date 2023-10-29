@@ -13,8 +13,12 @@ error_logger = logging.getLogger('error_logger')
 error_logger.setLevel(logging.ERROR)
 
 # Create handlers for debug and error log files
-debug_handler = logging.FileHandler(os.path.join(os.path.dirname(__file__),'logs/debug.log'))
-error_handler = logging.FileHandler(os.path.join(os.path.dirname(__file__),'logs/errors.log'))
+debug_handler = logging.FileHandler(
+    os.path.join(os.path.dirname(__file__), 'logs/debug.log')
+    )
+error_handler = logging.FileHandler(
+    os.path.join(os.path.dirname(__file__), 'logs/errors.log')
+    )
 
 # Create a formatter for the log messages
 formatter = logging.Formatter(

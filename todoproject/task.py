@@ -72,7 +72,6 @@ class Task:
                 error_logger.error(e)
 
 
-
 class CriticalTask(Task):
     """Represents a critical task that inherits from Task.
 
@@ -151,14 +150,14 @@ class TaskList:
         self.tasks: List[Task] = []
         self.task_id_counter: int = 1
 
-    def add_task(self, name: str, description: str , critical: bool = False, deadline: datetime = None) -> None:
+    def add_task(self, name: str, description: str , critical: bool = False,deadline: datetime = None) -> None:
         """Add a task to the list and update the task ID.
 
         Args:
             name (str): Name of the task.
             description (str): Description of the task.
             critical (bool) : If the task is critical or not
-            deadline (datetime or str): Deadline for the task in the
+            deadline (datetime or str): Deadline for critical tasks
         """
         if critical:
             task = CriticalTask(self.task_id_counter, name, description, deadline)
@@ -199,7 +198,8 @@ class TaskList:
                 id_found = True
                 task_to_remove = task
                 break
-        debug_logger.debug("Task %d removed successfully", task_to_remove.task_id)
+        debug_logger.debug("Task %d removed successfully",
+                           task_to_remove.task_id)
         try:
             if id_found:
                 self.tasks.remove(task_to_remove)
