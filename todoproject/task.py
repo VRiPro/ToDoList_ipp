@@ -150,7 +150,8 @@ class TaskList:
         self.tasks: List[Task] = []
         self.task_id_counter: int = 1
 
-    def add_task(self, name: str, description: str , critical: bool = False,deadline: datetime = None) -> None:
+    def add_task(self, name: str, description: str, critical: bool = False,
+                 deadline: datetime = None) -> None:
         """Add a task to the list and update the task ID.
 
         Args:
@@ -160,8 +161,9 @@ class TaskList:
             deadline (datetime or str): Deadline for critical tasks
         """
         if critical:
-            task = CriticalTask(self.task_id_counter, name, description, deadline)
-        else :
+            task = CriticalTask(self.task_id_counter, name,
+                                description, deadline)
+        else:
             task = Task(self.task_id_counter, name, description)
         if task not in self.tasks:
             self.tasks.append(task)

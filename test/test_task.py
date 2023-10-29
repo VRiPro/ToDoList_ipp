@@ -56,7 +56,7 @@ def test_add_critical_task_with_deadline():
     """Test on adding a critical task with a deadline
     """
     task_list = TaskList()
-    task_list.add_task("name", "description", 
+    task_list.add_task("name", "description",
                        critical=True, deadline="2023-10-19")
     assert isinstance(task_list.tasks[0], CriticalTask)
     assert task_list.tasks[0].deadline == datetime.strptime(
@@ -122,6 +122,7 @@ def test_add_large_number_of_tasks():
         task_list.add_task(f"Task {i}", f"Description {i}")
     for i, task in enumerate(task_list.tasks, start=1):
         assert task.task_id == i
+
 
 def test_complete_task_in_Task_list():
     """Test on the complete_task method
