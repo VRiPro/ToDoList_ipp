@@ -43,3 +43,17 @@ poetry remove package-name
 ```sh
 poetry install     
 ```
+
+## Testing
+
+### Test Cases
+
+| Test Case Description     | Input                                     | Expected Output                                |
+|---------------------------|-------------------------------------------|------------------------------------------------|
+| Task Init Test            | Task(1, "Test", "Read a book")            | Initialized Task object with the expected attributes and data types.  |
+| Task Complete Test        | Task(1, "Test", "Read a book")            | 'completed' attribute set to `True` after calling    `complete` method.|
+| Task Update Test          |`Task(1, "Test", "Read a book")`           | 'name' and 'description' attributes updated to new values.|
+| TaskList Init Test        |`TaskList()`                               | Initialized TaskList object with an empty 'tasks' list and 'task_id_counter' set to 1.  |
+| TaskList Add Task Test    |`TaskList()`, `add_task("Test Task", "Read a book")` | Task added to 'tasks' list, and 'task_id_counter' incremented by 1.  |
+| TaskList Complete Task Test| `TaskList()` with tasks, `complete_task("Task1")`|First task in 'tasks' marked as completed (attribute 'completed' set to `True`).  |
+| TaskList Remove Task Test  | `TaskList()` with tasks, `remove_task("Task1")` |First task in 'tasks' is removed.  |
