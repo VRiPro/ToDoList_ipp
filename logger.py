@@ -1,30 +1,27 @@
-"""This module is used to log errors and debug messages to a file.
+"""This module is used to configure our loggers
+   We particularly focus on logging debug and error logs
 """
 import logging
+import os
 
+# Create a logger for debug messages
+debug_logger = logging.getLogger('debug_logger')
+debug_logger.setLevel(logging.DEBUG)
 
-logging.basicConfig(level=logging.DEBUG)
-logger = logging.getLogger(__name__)
-"""Create a logger to log debug messages and errors.
-"""
+# Create a logger for error messages
+error_logger = logging.getLogger('error_logger')
+error_logger.setLevel(logging.ERROR)
 
-debug_handler = logging.FileHandler(
-    './logs/debug.log')
-error_handler = logging.FileHandler(
-    './logs/errors.log')
-"""Create a handler to log debug messages to a file.
-"""
+# Create handlers for debug and error log files
+debug_handler = logging.FileHandler(os.path.join(os.path.dirname(__file__),'logs/debug.log'))
+error_handler = logging.FileHandler(os.path.join(os.path.dirname(__file__),'logs/errors.log'))
 
-debug_handler.setLevel(logging.DEBUG)
-error_handler.setLevel(logging.ERROR)
-
-logger.addHandler(debug_handler)
-logger.addHandler(error_handler)
-
-
+# Create a formatter for the log messages
 formatter = logging.Formatter(
     '%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-"""Create a formatted message for the logs.
-"""
 debug_handler.setFormatter(formatter)
 error_handler.setFormatter(formatter)
+
+# Add the handlers to their respective loggers
+debug_logger.addHandler(debug_handler)
+error_logger.addHandler(error_handler)
