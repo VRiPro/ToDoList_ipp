@@ -18,7 +18,7 @@ Authors:
 Dependencies:
 - pytest (required for testing)
 
-For more information and usage instructions, please refer to the 
+For more information and usage instructions, please refer to the
 package documentation.
 
 """
