@@ -28,9 +28,9 @@ jobs:
 
     - name: Check PEP8 compliance and auto-format
       run: |
-        poetry run flake8
         poetry run autopep8 --in-place --recursive ./
-
+        poetry run flake8
+        
 
     - name: Check docstrings
       run: poetry run pydocstyle ./
