@@ -1,7 +1,8 @@
 poetry.lock
 *.pyc
 **/__pycache__/
-/logs/*
+**/debug.log
+**/errors.log
 .vscode/
 .pytest_cache/
 **/htmlcov/
