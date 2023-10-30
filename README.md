@@ -116,7 +116,7 @@ To know more about the modules, packages and classes implemented in our project 
 
 To consult the documentation, you can open the `index.html` file which is located in the `docs/build/html` folder. Copy the path of the file and paste it in your browser so you can naviguate through the documentation.
 
-#### How to genetarion a new version of the documentation :
+#### How to generate a new version of the documentation :
 If the code has come to evolve, you can generate a new version of the documentation by following these steps:
 
 * After entering the main project folder, execute the following command in the terminal : `sphinx-apidoc -o docs .` (where `docs` is the location of the newly generated files, and `.` the folder searched to find all the entities to be transformeds). The command will automatically generate all the `.rst` files associated with all the project's modules and packages directly in the `docs` folder.
