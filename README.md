@@ -111,7 +111,21 @@ ToDoList
 ```
 
 ### Documentation
-here we say that you can refer to the documentation to know more about the code (insert instructions about opening the already existing doc as well as instruction on how to generate a new doc)
+#### Consulting the documentation :
+To know more about the modules, packages and classes implemented in our project (and more generally the architecture), you can refer to the html documentation which have already been generated with Sphinx in the `docs` folder. 
+
+To consult the documentation, you can open the `index.html` file which is located in the `docs/build/html` folder. Copy the path of the file and paste it in your browser so you can naviguate through the documentation.
+
+#### How to genetarion a new version of the documentation :
+If the code has come to evolve, you can generate a new version of the documentation by following these steps:
+
+* After entering the main project folder, execute the following command in the terminal : `sphinx-apidoc -o docs .` (where `docs` is the location of the newly generated files, and `.` the folder searched to find all the entities to be transformeds). The command will automatically generate all the `.rst` files associated with all the project's modules and packages directly in the `docs` folder.
+
+* Still in the main project folder, generate all the html files using the following command : `sphinx-build -b html ./docs ./docs/_build/html`. `./docs` is the location of the `.rst` files needed, and `./docs/_build/html` is the location where the html files will be generated.
+
+* Then repeat the instructions in the previous section to consult the documentation by retrieving the path of the `index.html` file and pasting it in your browser.
+
+* Worth to mention that you don't need to modify the `conf.py` file in the `docs/source` folder (it's already configured to generate the documentation for the project), **unless** you want to change the html theme of the documentation.
 
 ### Concepts Applied:
 #### OOP Concepts: inheritance, encapsulation : 
