@@ -26,6 +26,9 @@ jobs:
     - name: Install project dependencies
       run: poetry install
 
+    - name: Check dependencies with safety
+      run: poetry run safety check
+
     - name: Check PEP8 compliance and auto-format
       run: |
         poetry run autopep8 --in-place --recursive ./
