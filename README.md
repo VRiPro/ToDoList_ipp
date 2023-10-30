@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ToDoList
 
 A comprehensive Python library for creating and managing personal tasks using concepts covered in the "Kit Big Data" course at télécom paris (2023-2024).
