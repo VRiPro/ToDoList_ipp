@@ -1,3 +1,8 @@
+"""sets up the configuration for Sphinx documentation generation.
+
+It defines project information, general settings, and HTML output options.
+"""
+
 import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
@@ -10,7 +15,8 @@ sys.path.insert(0, os.path.abspath('..'))
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'To-Do list project'
-copyright = '2023, Ahmed Belaaj, Nour Ben Rejeb, Victor Rivière, Mathieu Sauveur'
+copyright = """2023, Ahmed Belaaj, Nour Ben Rejeb,
+            Victor Rivière, Mathieu Sauveur"""
 author = 'Ahmed Belaaj, Nour Ben Rejeb, Victor Rivière, Mathieu Sauveur'
 release = '1.0.0'
 
