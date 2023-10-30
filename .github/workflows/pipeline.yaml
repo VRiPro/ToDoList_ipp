@@ -27,7 +27,7 @@ jobs:
       run: poetry install
 
     - name: Check dependencies with safety
-    run: poetry run safety check
+      run: poetry run safety check
 
     - name: Check PEP8 compliance and auto-format
       run: |
